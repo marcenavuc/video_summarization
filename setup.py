@@ -5,7 +5,6 @@ with open('README.md', 'r') as fh:
 
 REQUIREMENTS = [
     # Add your list of production dependencies here, eg:
-    # 'requests == 2.*',
 ]
 
 DEV_REQUIREMENTS = [
@@ -50,7 +49,7 @@ setuptools.setup(
     },
     entry_points={
         'console_scripts': [
-            'PROJECT_NAME_URL=project_name.my_module:main',
+            'PROJECT_NAME_URL=video_summarization.my_module:main',
         ]
     },
     python_requires='>=3.7, <4',
