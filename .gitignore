@@ -7,3 +7,9 @@ __pycache__
 dist
 htmlcov
 venv
+
+# notebooks
+.ipynb_checkpoints/
+
+# Pycharm
+idea/
