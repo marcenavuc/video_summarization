@@ -19,13 +19,13 @@ DEV_REQUIREMENTS = [
 ]
 
 setuptools.setup(
-    name='PROJECT_NAME_URL',
+    name='video_summarization',
     version='0.1.0',
     description='Your project description here',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url='http://github.com/USERNAME/PROJECT_NAME_URL',
-    author='USERNAME',
+    url='https://github.com/marcenavuc/video_summarization',
+    author='mark averchenko',
     license='MIT',
     packages=setuptools.find_packages(
         exclude=[
@@ -52,5 +52,5 @@ setuptools.setup(
             'PROJECT_NAME_URL=video_summarization.my_module:main',
         ]
     },
-    python_requires='>=3.7, <4',
+    python_requiUSERNAMEres='>=3.7',
 )
