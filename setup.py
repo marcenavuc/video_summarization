@@ -52,5 +52,5 @@ setuptools.setup(
             'PROJECT_NAME_URL=video_summarization.my_module:main',
         ]
     },
-    python_requiUSERNAMEres='>=3.7',
+    python_requiUSERNAMEres='>=3.10',
 )
