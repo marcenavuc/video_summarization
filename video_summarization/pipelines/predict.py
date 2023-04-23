@@ -33,6 +33,8 @@ def main(cfg):
     log.info("Load labels")
 
     video_path = os.path.join(cfg["dataset_path"], cfg["video_path"])
+    if not os.path.isfile(video_path):
+        video_path = cfg["video_path"]
     ic_kwargs = cfg["image_caption"]["kwargs"]
 
     audio_path = save_audio(video_path, target_path=cfg["work_path"])
@@ -61,16 +63,26 @@ def main(cfg):
     preds = fill_preds(ic_result, tdf)
     log.info("Sample of preds {}".format(preds))
 
-    filename = os.path.basename(video_path).split(".")[0]
-    annotation = labels_df[labels_df['video_id'] == filename].annotation.values[0]
+    if cfg['inference']:
+        return {"preds": preds}
+    else:
+        filename = os.path.basename(video_path).split(".")[0]
+        annotation = labels_df[labels_df['video_id'] == filename].annotation.values[0]
 
-    log.info("Metrics")
-    log.info(json.dumps({
-        'eval_metric_dummy': eval_metric_dummy(preds, annotation),
-        'eval_metric_dummy_t_0.25': eval_metric_dummy(preds, annotation, t=0.25),
-        'eval_metric_dummy_t_0.1': eval_metric_dummy(preds, annotation, t=0.1),
-        'eval_metric_f1_canonical': eval_metric_f1_canonical(preds, annotation)
-    }))
+        log.info("Metrics")
+        result = {
+            "preds": preds,
+            "metrics": {
+                'eval_metric_dummy': eval_metric_dummy(preds, annotation),
+                'eval_metric_dummy_t_0.25': eval_metric_dummy(preds, annotation, t=0.25),
+                'eval_metric_dummy_t_0.1': eval_metric_dummy(preds, annotation, t=0.1),
+                'eval_metric_f1_canonical': eval_metric_f1_canonical(preds, annotation)
+            }
+        }
+
+        log.info(json.dumps(result['metrics']))
+
+        return result
 
 
 if __name__ == "__main__":
