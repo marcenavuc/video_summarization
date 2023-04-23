@@ -21,4 +21,3 @@ llm:
   presence_penalty: 0
 asr: "tiny.en"
 annotation_path: "annotation.parquet"
-max_tokens_in_batch: 2000

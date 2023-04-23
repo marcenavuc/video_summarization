@@ -16,3 +16,15 @@ to publish this in advertisement or use in TikTok, YouTube Shorts.
 This paragraph will contain some performance results of the whole solution.
 On this time there are achievement of 51% f1-score on one sample
 
+## Getting started
+1. Download dataset from Google Drive 
+   https://drive.google.com/drive/folders/1nED17YRACPdQ5Zdrxg6QPGarxTzT7tNY?usp=share_link
+   or use following script to download dataset
+   ```bash
+   pip install gdown && gdown https://drive.google.com/drive/folders/1nED17YRACPdQ5Zdrxg6QPGarxTzT7tNY?usp=share_link
+   ```
+2. Choose config file or write our own config
+3. Run project
+```bash
+python video_summarization/pipelines/predict_small_sample.py
+```
