@@ -1,0 +1,25 @@
+dataset_path: /home/mark/PycharmProjects/video_summarization/datasets
+work_path: /home/mark/PycharmProjects/video_summarization/workspace
+open_ai_env_name: OPENAI_APIKEY
+video_path: videos/Bearpark_Climbing.mp4
+image_caption:
+  fps: 1
+  image_size:
+  - 224
+  - 224
+  model_name: nlpconnect/vit-gpt2-image-captioning
+  feature_extractor: nlpconnect/vit-gpt2-image-captioning
+  tokenizer: nlpconnect/vit-gpt2-image-captioning
+  kwargs:
+    max_length: 10
+    num_beams: 2
+llm:
+  model: text-davinci-003
+  temperature: 0.7
+  max_tokens: 256
+  top_p: 1
+  frequency_penalty: 0
+  presence_penalty: 0
+asr: tiny.en
+annotation_path: annotation.parquet
+max_tokens_in_batch: 2000

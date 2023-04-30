@@ -11,7 +11,7 @@ from transformers import VisionEncoderDecoderModel, ViTImageProcessor, AutoToken
 from video_summarization.src.asr import get_text_recognition
 from video_summarization.src.ic import get_image_caption
 from video_summarization.src.io import save_audio, get_images
-from video_summarization.src.llm import create_prompt, transform_predictions, fill_preds, merge_results, \
+from video_summarization.src.llm import transform_predictions, fill_preds, merge_results, \
     create_batch_prompt
 from video_summarization.src.metric import eval_metric_dummy, eval_metric_f1_canonical
 

@@ -1,5 +1,5 @@
-dataset_path: "/Users/m.averchenko/PycharmProjects/video_summarization/datasets"
-work_path: "/Users/m.averchenko/PycharmProjects/video_summarization/workspace"
+dataset_path: "/home/mark/PycharmProjects/video_summarization/datasets"
+work_path: "/home/mark/PycharmProjects/video_summarization/workspace"
 
 inference: False
 open_ai_env_name: "OPENAI_APIKEY"

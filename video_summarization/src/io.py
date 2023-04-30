@@ -15,7 +15,7 @@ def save_audio(file_path, target_path=None):
     return result_path
 
 
-def get_images(video_path, fps, image_size):
+def get_images(video_path, fps, image_size=(224, 224), transform=True):
     cap = cv2.VideoCapture(video_path)
     frame_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
     images = []
@@ -23,9 +23,11 @@ def get_images(video_path, fps, image_size):
     for i in range(0, frame_count, int(cap.get(cv2.CAP_PROP_FPS) / fps)):
         cap.set(cv2.CAP_PROP_POS_FRAMES, i)
         ret, frame = cap.read()
-        if ret:
+        if ret and transform:
             image = Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)).resize(image_size)
-            images.append(image)
+        else:
+            image = Image.fromarray(frame)
+        images.append(image)
 
     cap.release()
     return images
