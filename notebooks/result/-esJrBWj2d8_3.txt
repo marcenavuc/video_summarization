@@ -1,0 +1,77 @@
+[2023-04-24 03:03:23,993][HYDRA] /home/mark/miniconda3/envs/diplom/lib/python3.10/site-packages/hydra/_internal/hydra.py:119: UserWarning: Future Hydra versions will no longer change working directory at job runtime by default.
+See https://hydra.cc/docs/1.2/upgrades/1.1_to_1.2/changes_to_job_working_dir/ for more information.
+  ret = run_job(
+
+[2023-04-24 03:03:30,282][__main__][INFO] - Load labels
+MoviePy - Writing audio in /home/mark/PycharmProjects/video_summarization/workspace/-esJrBWj2d8.mp3
+chunk:   0%|          | 0/5082 [00:00<?, ?it/s, now=None]chunk:   3%|▎         | 135/5082 [00:00<00:03, 1347.87it/s, now=None]chunk:   5%|▌         | 271/5082 [00:00<00:03, 1354.84it/s, now=None]chunk:   8%|▊         | 407/5082 [00:00<00:03, 1287.78it/s, now=None]chunk:  11%|█         | 537/5082 [00:00<00:03, 1240.28it/s, now=None]chunk:  13%|█▎        | 662/5082 [00:00<00:03, 1214.12it/s, now=None]chunk:  16%|█▌        | 797/5082 [00:00<00:03, 1252.51it/s, now=None]chunk:  18%|█▊        | 927/5082 [00:00<00:03, 1266.81it/s, now=None]chunk:  21%|██        | 1067/5082 [00:00<00:03, 1307.88it/s, now=None]chunk:  24%|██▍       | 1207/5082 [00:00<00:02, 1333.53it/s, now=None]chunk:  27%|██▋       | 1350/5082 [00:01<00:02, 1355.64it/s, now=None]chunk:  29%|██▉       | 1498/5082 [00:01<00:02, 1389.98it/s, now=None]chunk:  32%|███▏      | 1638/5082 [00:01<00:02, 1364.59it/s, now=None]chunk:  35%|███▍      | 1776/5082 [00:01<00:02, 1363.39it/s, now=None]chunk:  38%|███▊      | 1916/5082 [00:01<00:02, 1365.74it/s, now=None]chunk:  40%|████      | 2053/5082 [00:01<00:02, 1338.16it/s, now=None]chunk:  43%|████▎     | 2189/5082 [00:01<00:02, 1344.33it/s, now=None]chunk:  46%|████▌     | 2324/5082 [00:01<00:02, 1335.45it/s, now=None]chunk:  48%|████▊     | 2458/5082 [00:01<00:02, 1300.91it/s, now=None]chunk:  51%|█████     | 2589/5082 [00:01<00:01, 1289.55it/s, now=None]chunk:  54%|█████▎    | 2719/5082 [00:02<00:01, 1285.09it/s, now=None]chunk:  56%|█████▋    | 2860/5082 [00:02<00:01, 1321.18it/s, now=None]chunk:  59%|█████▉    | 2997/5082 [00:02<00:01, 1334.05it/s, now=None]chunk:  62%|██████▏   | 3140/5082 [00:02<00:01, 1361.29it/s, now=None]chunk:  65%|██████▍   | 3288/5082 [00:02<00:01, 1395.65it/s, now=None]chunk:  67%|██████▋   | 3428/5082 [00:02<00:01, 1387.20it/s, now=None]chunk:  70%|███████   | 3570/5082 [00:02<00:01, 1389.32it/s, now=None]chunk:  73%|███████▎  | 3710/5082 [00:02<00:00, 1392.44it/s, now=None]chunk:  76%|███████▌  | 3850/5082 [00:02<00:00, 1382.36it/s, now=None]chunk:  79%|███████▊  | 3992/5082 [00:02<00:00, 1392.96it/s, now=None]chunk:  81%|████████▏ | 4132/5082 [00:03<00:00, 1363.01it/s, now=None]chunk:  84%|████████▍ | 4269/5082 [00:03<00:00, 1361.79it/s, now=None]chunk:  87%|████████▋ | 4406/5082 [00:03<00:00, 1362.36it/s, now=None]chunk:  89%|████████▉ | 4545/5082 [00:03<00:00, 1359.97it/s, now=None]chunk:  92%|█████████▏| 4682/5082 [00:03<00:00, 1343.54it/s, now=None]chunk:  95%|█████████▍| 4824/5082 [00:03<00:00, 1360.05it/s, now=None]chunk:  98%|█████████▊| 4963/5082 [00:03<00:00, 1363.39it/s, now=None]                                                                      MoviePy - Done.
+[2023-04-24 03:03:34,119][__main__][INFO] - Converted video to image
+[2023-04-24 03:05:22,012][__main__][INFO] - Got image caption
+[2023-04-24 03:05:22,013][py.warnings][WARNING] - /home/mark/miniconda3/envs/diplom/lib/python3.10/site-packages/whisper/transcribe.py:114: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+
+[2023-04-24 03:05:32,649][__main__][INFO] - Batch: start 0, end 111
+[2023-04-24 03:05:36,693][__main__][INFO] - Response from gpt: 
+        0   0.3
+        10  0.3
+        20  0.2
+        30  0.2
+        40  0.4
+        50  0.4
+        60  0.2
+        70  0.2
+        80  0.3
+        90  0.3
+        100 0.3
+        110 0.3
+[2023-04-24 03:05:36,695][__main__][INFO] - Batch: start 112, end 230
+[2023-04-24 03:05:45,355][__main__][INFO] - Response from gpt: 
+        0   1.0
+112   1.0
+116   0.5
+119   0.5
+127   0.5
+129   0.5
+133   0.5
+136   0.5
+139   0.5
+142   0.5
+149   0.5
+153   0.5
+156   0.5
+159   0.5
+164   0.5
+167   0.5
+170   0.5
+179   0.5
+182   0.5
+185   0.5
+191   0.5
+194   0.5
+197   0.5
+200   0.5
+203   0.5
+206   0.5
+209   0.5
+212   0.5
+215   0.5
+218   0.5
+221   0.5
+224   0.5
+227   0.5
+[2023-04-24 03:05:45,367][__main__][INFO] - Sample of preds      second  prob
+0         0   1.0
+1         1   1.0
+2         2   1.0
+3         3   1.0
+4         4   1.0
+..      ...   ...
+226     226   0.5
+227     227   0.5
+228     228   0.5
+229     229   0.5
+230     230   0.5
+
+[231 rows x 2 columns]
+[2023-04-24 03:05:45,367][__main__][INFO] - Metrics
+[2023-04-24 03:05:45,406][__main__][INFO] - {"eval_metric_dummy": 0.25718608169440244, "eval_metric_dummy_t_0.25": 1.0, "eval_metric_dummy_t_0.1": 1.0, "eval_metric_f1_canonical": 0.15639467592592593}

@@ -10,7 +10,7 @@ def create_prompt(asr_result, ic_result):
 
         Speech recognition results:
         {asr_result}
-        Return summarization as table with columns of second and importance. importance should be from 0 to 1
+        Return summarization as table with columns of second and importance. importance should be from 0 to 1.
         """.format(ic_result=ic_result.to_string(index=None),
                    asr_result=asr_result.to_string(index=None)
                    )
@@ -62,7 +62,7 @@ def find_ind(x, asr_result):
     return np.nan if res.shape[0] == 0 else res[0]
 
 
-def merge_results(ic_result, asr_result, max_tokens = 2000):
+def merge_results(ic_result, asr_result, max_tokens=2000):
     ic_result['wc'] = ic_result['text'].str.split().apply(len)
     ic_result['cwc'] = ic_result['wc'].cumsum()
 
@@ -75,3 +75,12 @@ def merge_results(ic_result, asr_result, max_tokens = 2000):
     all_texts['wc_all'] = (all_texts['wc_ic'] + all_texts['wc_asr'].fillna(0)).cumsum()
     all_texts['batch'] = (all_texts['wc_all'] // max_tokens).astype(int)
     return all_texts
+
+
+
+def create_batch_annotation_prompt(annotation, start, end):
+    
+    return """
+Second Importance 
+{}
+""".format("\n".join([f"{num} {annotation[i]}" for i, num in enumerate(range(start, end))]))
